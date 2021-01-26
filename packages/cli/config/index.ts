@@ -479,9 +479,9 @@ const config = convict({
 
 	logs: {
 		level: {
-			doc: 'Log output level. Options are error, warning, notice, info and debug.',
+			doc: 'Log output level. Options are error, warn, info, verbose and debug.',
 			format: String,
-			default: 'notice',
+			default: 'info',
 			env: 'N8N_LOG_LEVEL',
 		},
 		output: {
@@ -496,8 +496,8 @@ const config = convict({
 				format: String,
 				default: path.join(core.UserSettings.getUserN8nFolderPath(), 'n8n.log'),
 				env: 'N8N_LOG_FILE_LOCATION',
-			}
-		}
+			},
+		},
 	},
 
 });
